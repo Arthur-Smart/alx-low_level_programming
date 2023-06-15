@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="your_c_file.c"; OUTPUTFILE="${CFILE%.c}.s"; gcc -S -masm=intel "$CFILE" -o "$OUTPUTFILE"
+CFILE="your_c_file.c"; OUTPUTFILE="${CFILE%.c}.s"; gcc -S -masm=intel "$CFILE" -o "$OUTPUTFILE"; unset CFILE OUTPUTFILE
