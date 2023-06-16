@@ -11,7 +11,7 @@ int main(void)
 {
 	int start_number;
 
-	for (start_number = 0; start_number != 9; start_number++)
+	for (start_number = '0'; start_number != '9'; start_number++)
         {
 	putchar(start_number);
 	}
