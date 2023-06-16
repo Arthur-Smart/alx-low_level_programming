@@ -11,7 +11,7 @@ int main(void)
 {
         int sd_number;
 
-        for (sd_number = '0'; sd_number != '9'; sd_number++)
+        for (sd_number = '0'; sd_number <= '9'; sd_number++)
         {
         putchar(sd_number);
         }
