@@ -11,7 +11,7 @@ int main(void)
 {
 	char reverse_way;
 
-	for(reverse_way = 'z'; reverse_way >= 'a'; reverse_way--)
+	for (reverse_way = 'z'; reverse_way >= 'a'; reverse_way--)
 	{
 	putchar(reverse_way);
 	}
