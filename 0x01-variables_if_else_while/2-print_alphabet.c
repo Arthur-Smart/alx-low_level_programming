@@ -4,17 +4,17 @@
 
 /**
  * main - Entry point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char alphabet_in_lowercase = 'a';
+        char alphabet_in_lowercase;
 
-	while (alphabet_in_lowercase <= 'z')
+        for(alphabet_in_lowercase = 'a'; alphabet_in_lowercase <= 'z'; alphabet_in_lowercase++)
 	{
-		putchar (alphabet_in_lowercase );
-		alphabet_in_lowercase ++;
-		putchar ('\n');
+		putchar(alphabet_in_lowercase);
 	}
-	return (0);
-}	 
+	putchar('\n');
+        return (0);
+}
