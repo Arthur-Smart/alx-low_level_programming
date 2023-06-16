@@ -12,13 +12,12 @@ int main(void)
 
 	for (number = 0; number < 16; number++)
 	{
-		if (number < 10)
-			putchar(number + '0');
-		else
-			putchar(number - 10 + 'a');
+	if (number < 10)
+	putchar(number + '0');
+	else
+	putchar(number - 10 + 'a');
 	}	
-
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
