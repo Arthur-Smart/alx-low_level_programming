@@ -11,8 +11,8 @@ int main(void)
 {
 	int start_num;
 
-	for (start_num = '0'; start_num < '10'; start_num++)
-	putchar("%d", start_num);
-	putchar('\n');
+	for (start_num = 0; start_num < 10; start_num++)
+	printf("%d", start_num);
+	printf("\n");
 	return (0);
 }
