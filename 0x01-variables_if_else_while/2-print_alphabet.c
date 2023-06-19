@@ -9,12 +9,11 @@
 
 int main(void)
 {
-	char alphabet_in_lowercase;
+	char al;
 
-        for (alphabet_in_lowercase = 'a';
-alphabet_in_lowercase <= 'z'; alphabet_in_lowercase++)
+        for (al = 'a'; al <= 'z'; al++)
 	{
-	putchar(alphabet_in_lowercase);
+	putchar(al);
 	}
 	putchar('\n');
         return (0);
