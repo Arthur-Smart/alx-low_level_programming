@@ -9,12 +9,10 @@
 
 int main(void)
 {
-	int start_number;
+	int start_num;
 
-	for (start_number = '0'; start_number != '9'; start_number++)
-        {
-	putchar(start_number);
-	}
+	for (start_num = '0'; start_num < '10'; start_num++)
+	putchar("%d", start_num);
 	putchar('\n');
 	return (0);
 }
