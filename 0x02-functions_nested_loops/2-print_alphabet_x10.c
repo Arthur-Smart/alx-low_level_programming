@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10(void) - Make alphabet 10x times
+ * print_alphabet_x10(void) - alphabet 10x times results
  *Return: void
  */
 
 void print_alphabet_x10(void)
+
 {
 	char e;
 	int i = 0;
