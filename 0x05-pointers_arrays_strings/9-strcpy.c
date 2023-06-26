@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * _strcpy - A  function that copies the string pointed
- * to by src, including the terminating null byte (\0),
- * to the buffer pointed to by dest.
+ * _strcpy - A function that copies `the string pointed
+ * from src to dest
  * @dest: Final place
  * @src: Initial place
  *  Return: The  pointer to dest
