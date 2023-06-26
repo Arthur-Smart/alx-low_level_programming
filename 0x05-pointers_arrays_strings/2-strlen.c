@@ -3,11 +3,11 @@
 /**
  *__strlen - A function that
  * returns the length of a string
- * @str: The string being checked
+ * @s: The string being checked
  * Return: The lenght of str
  */
 
-size_t  _strlen(const char *s)
+int _strlen(char *s)
 {
 	int length = 0;
 
