@@ -10,8 +10,8 @@
 
 int main(void)
 {
-	char password(84);
-	int i = 0, sum = 0; d1, d2;
+	char password[84];
+	int i = 0, sum = 0, d1, d2;
 
 	srand(time(0));
 
