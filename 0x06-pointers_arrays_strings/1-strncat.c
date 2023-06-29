@@ -11,11 +11,21 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, len = 0;
+	int i;
+	int k;
 
-	while (dest[i++])
-	len++;
-	for (i = 0; src[i] && i < n; i++)
-	dest[len++] = src[len];
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	k = 0;
+	while (k < n && src[k] != '\0')
+	{
+	dest[i] = src[k];
+	i++;
+	k++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
