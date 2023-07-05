@@ -16,7 +16,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * sqrt - Natural sqrt Evaluation
+ * sqrt_s - Natural sqrt Evaluation
  * @n: Number used
  * @i: iterator
  * Return: Natural sqrt
@@ -25,6 +25,7 @@ int _sqrt_recursion(int n)
 int sqrt_s(int n, int i)
 {
 	int sqr = i * i;
+
 	if (sqr > n)
 		return (-1);
 	if (sqr == n)
