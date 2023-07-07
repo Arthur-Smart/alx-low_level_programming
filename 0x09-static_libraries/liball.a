@@ -1,0 +1,477 @@
+!<arch>
+0-isupper.c/    0           0     0     644     265       `
+#include "main.h"
+
+/**
+ * _isupper - A function that checks for uppercase
+ * character
+ * @c: The value to be checked
+ * Return: 1 if c is uppercase and 0 otherwise
+ */
+
+int _isupper(int c)
+{
+	if (c >= 'A' && c >= 'Z')
+	{
+	return (1);
+	}
+	else
+	{
+	return (0);
+	}
+}
+
+0-memset.c/     0           0     0     644     308       `
+#include "main.h"
+
+/**
+ * _memset - A function that fills
+ * memory with a constant byte
+ * @s: address
+ * @n: Bytes taken in account
+ * @b: Constant byte
+ * Return: Always 0 (Success)
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int a;
+
+	for (a = 0; a < n; a++)
+	s[a] = b;
+	return (s);
+}
+0-strcat.c/     0           0     0     644     378       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strcat - A function that concatenates
+ * two strings
+ * @src: Origin
+ * @dest: Destination
+ * Return: pointer to the resulting string
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int len = 0, j;
+
+	while (dest[len])
+	{
+	len++;
+	}
+	for (j = 0; src[j] != 0; j++)
+	{
+	dest[len] = src[j];
+	len++;
+	}
+	dest[len] = '\0';
+	return (dest);
+}
+100-atoi.c/     0           0     0     644     432       `
+#include "main.h"
+
+/**
+ * _atoi - A function that convert a string
+ * to an integer
+ * @s: The pointer in account
+ * Return: Integer
+ */
+
+int _atoi(char *s)
+{
+	int a = 0;
+	unsigned int val1 = 0;
+	int min = 1;
+	int i = 0;
+
+	while (s[a])
+	{
+	if (s[a] == 45)
+	{
+	min *= -1;
+	}
+	while (s[a] >= 48 && s[a] <= 57)
+	{
+	i = 1;
+	val1 = (val1 * 10) + (s[a] - '0');
+	a++;
+	}
+	if (i == 1)
+	{
+	break;
+	}
+	a++;
+	}
+	val1 *= min;
+	return (val1);
+}
+1-isdigit.c/    0           0     0     644     238       `
+#include "main.h"
+
+/**
+ * _isdigit - A function that checks for a digit
+ * @c: The number being checked
+ * Return: 1 if c is a digit or 0 otherwise
+ */
+
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+	return (1);
+	}
+    	return (0);
+}
+1-memcpy.c/     0           0     0     644     317       `
+#include "main.h"
+
+/**
+ * _memcpy - A unction that copies
+ * memory area.
+ * @dest: Final position
+ * @src: Intial position
+ * @n: Bytes in account
+ * Return: A pointer to dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int a;
+
+	for (a = 0; a < n; a++)
+	dest[a] = src[a];
+	return (dest);
+}
+
+1-strncat.c/    0           0     0     644     422       `
+#include "main.h"
+
+/**
+ * _strnca - A function that concatenates
+ * two strings
+ * @n: Bytes number
+ * @src: String to add
+ * @dest: Point of adding
+ * Return: A pointer to the resulting string
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int i;
+	int k;
+
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	k = 0;
+	while (k < n && src[k] != '\0')
+	{
+	dest[i] = src[k];
+	i++;
+	k++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+2-strchr.c/     0           0     0     644     290       `
+#include "main.h"
+
+/**
+ * _strchr - A function that locates
+ * a character in a string.
+ * @s: First input
+ * @c: Second input
+ * Return: Always 0 (Success)
+ */
+
+char *_strchr(char *s, char c)
+{
+	int a;
+
+	for (a = 0; s[a] >= '\0'; a++)
+	{
+	if (s[a] == c)
+	return (s + a);
+	}
+	return (0);
+}
+2-strlen.c/     0           0     0     644     237       `
+#include <stdio.h>
+
+/**
+ *_strlen - A function that
+ * returns the length of a string
+ * @s: The string being checked
+ * Return: The lenght of str
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s++)
+	length++;
+	return (length);
+}
+
+2-strncpy.c/    0           0     0     644     413       `
+#include "main.h"
+
+/**
+ * _strncpy - A function that copies a string
+ * @dest: The place where string is
+ * stored
+ * @src: Source string
+ * @n: The number of bytes copied
+ * Return: Dest pointer
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i = 0, len = 0;
+
+	while (src[i++])
+	len++;
+
+	for (i = 0; src[i] && i < n; i++)
+	dest[i] = src[i];
+	for (i = len; i < n; i++)
+	dest[i] = '\0';
+	return (dest);
+}
+
+3-islower.c/    0           0     0     644     255       `
+#include "main.h"
+
+/**
+ * _islower - finds lowercase characters
+ * @c: The character being checked
+ * Return: 1 incase of lowercase character or 0 for
+ * anything else
+ */
+
+int _islower(int c)
+{
+	if (c >= 97 && c <= 122)
+	{
+	return (1);
+	}
+	return (0);
+}
+
+3-puts.c/       0           0     0     644     241       `
+#include "main.h"
+
+/**
+ * _puts - A function that prints a string,
+ * followed by a new line, to stdout.
+ * @str: The string
+ * Return: void
+ */
+
+void _puts(char *str)
+{
+	for (; *str != '\0'; str++)
+	{
+	_putchar(*str);
+	}
+	_putchar('\n');
+}
+
+3-strcmp.c/     0           0     0     644     264       `
+#include "main.h"
+
+/**
+ * _strcmp - A function that compares two strings
+ * @s1 - First string
+ * @s2 - Second string
+ * Return: Comparison Results
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+	s1++;
+	s2++;
+	}
+	return (*s1 - *s2);
+}
+3-strspn.c/     0           0     0     644     381       `
+#include "main.h"
+
+/**
+ * _strspn - A function that gets the
+ * length of a prefix substring
+ * @s: First input
+ * @accept: Second input
+ */
+
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int b = 0;
+	int a;
+
+	while (*s)
+	{
+	for (a = 0; accept[a]; a++)
+	{
+	if (*s == accept[a])
+	{
+	b++;
+	break;
+	}
+	else if (accept[a + 1] == '\0')
+	return (b);
+	}
+	s++;
+	}
+	return (b);
+}
+
+
+4-isalpha.c/    0           0     0     644     294       `
+#include "main.h"
+
+/**
+ * _isalpha - finds alphabetic character
+ * @c: the alphabet chacter to be checked
+ * Return: 1 for the found alphabetic character
+ * and 0 for anything else
+ */
+
+int _isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+	return (1);
+	}
+	return (0);
+}
+4-strpbrk.c/    0           0     0     644     340       `
+#include "main.h"
+
+/**
+ * _strpbrk: A function that searches a
+ * string for any of a set of bytes.
+ * @s: First string
+ * @accept: Second string
+ * Return: Pointer or NULL
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+	int a;
+
+	while (*s)
+	{
+	for (a = 0; accept[a]; a++)
+	{
+	if (*s == accept[a])
+	return (s);
+	}
+	s++;
+	}
+	return ('\0');
+}
+
+5-strstr.c/     0           0     0     644     404       `
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strstr - A function that locates
+ * a substring
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+	for (; *haystack != '\0'; haystack++)
+	{
+	char *a = haystack;
+	char *b = needle;
+
+	while (*a == *b && *b != '\0')
+	{
+	a++;
+	b++;
+	}
+	if (*b == '\0')
+	return (haystack);
+	}
+	return (NULL);
+}
+6-abs.c/        0           0     0     644     227       `
+#include  "main.h"
+
+/**
+ * _abs - computing  the absolute value of
+ * an integer
+ * @e: The number to be computed
+ * Return: Absolute value or 0
+ */
+
+int _abs(int e)
+{
+	if (e < 0)
+	{
+	return (-e);
+	}
+	else
+	{
+	return (e);
+	}
+}
+
+9-strcpy.c/     0           0     0     644     327       `
+#include "main.h"
+
+/**
+ * _strcpy - A function that copies `the string pointed
+ * from src to dest
+ * @dest: Final place
+ * @src: Initial place
+ *  Return: The  pointer to dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int s;
+	
+	for (s = 0; src[s] != '\0'; s++)
+	{
+	dest[s] = src[s];
+	}
+	dest[s++] = '\0';
+	return (dest);
+}
+
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
+_putchar.c/     0           0     0     644     247       `
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
