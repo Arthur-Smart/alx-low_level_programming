@@ -1,5 +1,23 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <stddef.h>
+
+/**
+ * struct list_s - The Singly linked list
+ * @str: string - Memoly allocation string
+ * @len: The length
+ * @next: A pointer to the next node
+ * Description: Singly linked list node structure
+ */
+
+
+typedef struct list_s
+{
+	char *str;
+	unsigned int len;
+	struct list_s *next;
+} list_t;
+
 
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
