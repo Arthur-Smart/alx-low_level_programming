@@ -18,7 +18,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (j = 63; j >= 0; j--)
 	{
-	pre_value = (result_val >> j);
+	pre_value = result_val >> j;
 	if (pre_value & 1)
 	{
 	value++;
