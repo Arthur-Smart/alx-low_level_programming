@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char create_write_file(char *file);
+void close_file_descriptor(int FD_VALUE);
 
 /**
  * create_write_file - A function that checks create and write
